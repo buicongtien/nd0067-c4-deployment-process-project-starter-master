@@ -52,7 +52,7 @@ jobs:
           name: Deploy App
           command: |
             eb init ${EB_APPLICATION_NAME} --region ${AWS_DEFAULT_REGION} --platform "Node.js" --no-verify
-            cd www
+            ls
             npm run deploy
   # deploy step will run only after manual approval
   deploy:
