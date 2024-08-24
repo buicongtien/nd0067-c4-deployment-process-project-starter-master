@@ -51,8 +51,6 @@ jobs:
       - run:
           name: Deploy App
           command: |
-            export AWS_PROFILE=eb-cli
-            eb init ${EB_APPLICATION_NAME} --region ${AWS_DEFAULT_REGION} --platform "Node.js" --profile eb-cli --no-verify
             cd udagram/udagram-api/www
             ls
             npm run deploy
