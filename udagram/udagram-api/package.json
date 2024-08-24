@@ -13,7 +13,7 @@
     "dev": "npx ts-node-dev --respawn --transpile-only ./src/server.ts",
     "prod": "npx tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
-    "deploy": "npm run build && eb list && eb use Udagram-api-host && eb deploy",
+    "deploy": "npm run build && eb init && eb list && eb use Udagram-api-host && eb deploy",
     "build": "npm run tsc && cd www && zip -r Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
