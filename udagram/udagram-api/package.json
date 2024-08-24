@@ -14,7 +14,7 @@
     "prod": "npx tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
     "build": "npm install . && npm run clean && tsc && cp -rf src/config www/config && cp -R ..elasticbeanstalk www/.elasticbeanstalk && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www ",
-    "deploy": "npm run build && eb list && eb use Udagram-api-host-env && eb deploy",
+    "deploy": "npm run build && ls && eb list && eb use Udagram-api-host-env && eb deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
